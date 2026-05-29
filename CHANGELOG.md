@@ -7,9 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Changed
-- Added Laravel 13 support (runtime constraints and CI matrix), with PHP 8.3+ for Laravel 13 combinations.
+- Tightened CI to a smaller, meaningful Laravel/PHP support matrix.
+- Confirmed Laravel 13 support with PHP 8.3+.
 
-## [1.0.0] - 2026-05-29
+### Added
+- `1.0.0` release notes prepared for the first stable Packagist release.
+
+## [1.0.0] - Upcoming
+
+This will be the first stable release to publish on GitHub and Packagist.
 
 ### Added
 - `EventPayload` data class with `fromException()`, `fromFailedJob()`, and `fromFailedCron()` factories.
