@@ -5,23 +5,28 @@
     "keywords": ["laravel", "notifyhub", "alerting", "exceptions", "monitoring"],
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/snb4crazy/notifyhub-laravel",
     "authors": [
         {
             "name": "Serhii Dymenko",
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/snb4crazy/notifyhub-laravel/issues",
+        "source": "https://github.com/snb4crazy/notifyhub-laravel"
+    },
     "require": {
         "php": "^8.2",
-        "illuminate/http": "^10.0|^11.0|^12.0",
-        "illuminate/support": "^10.0|^11.0|^12.0",
-        "illuminate/contracts": "^10.0|^11.0|^12.0"
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0"
     },
     "require-dev": {
         "guzzlehttp/guzzle": "^7.0",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^7.0|^8.0",
-        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
         "phpunit/phpunit": "^10.0|^11.0|^12.0"
     },
     "autoload": {

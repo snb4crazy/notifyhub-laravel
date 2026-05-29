@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+- Added Laravel 13 support (runtime constraints and CI matrix), with PHP 8.3+ for Laravel 13 combinations.
+
+## [1.0.0] - 2026-05-29
+
 ### Added
 - `EventPayload` data class with `fromException()`, `fromFailedJob()`, and `fromFailedCron()` factories.
 - `NotifyHubClient` implementing `NotifyHubClientInterface` with `send()`, `sendException()`, and `sendRaw()` methods.

@@ -28,6 +28,11 @@ class NotifyHubException extends RuntimeException
      */
     public static function fromHttpException(\Throwable $e, ?int $httpStatus = null): self
     {
+        // Try to extract the real HTTP status from an Illuminate RequestException.
+        if ($httpStatus === null && $e instanceof \Illuminate\Http\Client\RequestException) {
+            $httpStatus = $e->response->status();
+        }
+
         return new self(
             message: 'NotifyHub request failed: '.$e->getMessage(),
             code: $httpStatus ?? (int) $e->getCode(),

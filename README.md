@@ -10,8 +10,10 @@ Laravel client package for sending events to a [NotifyHub](https://github.com/sn
 
 | Dependency | Version         |
 |------------|-----------------|
-| PHP        | 8.2 – 8.4       |
-| Laravel    | 10, 11, or 12   |
+| PHP        | 8.2+            |
+| Laravel    | 10, 11, 12, 13  |
+
+For Laravel 13, PHP 8.3+ is required by Laravel itself.
 
 ## Installation
 
