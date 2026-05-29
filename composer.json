@@ -1,0 +1,58 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "snb4crazy/notifyhub-laravel",
+    "description": "Laravel client package for sending events to a NotifyHub server.",
+    "keywords": ["laravel", "notifyhub", "alerting", "exceptions", "monitoring"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Serhii Dymenko",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.0",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^7.0|^8.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotifyHub\\LaravelClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotifyHub\\LaravelClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotifyHub\\LaravelClient\\NotifyHubServiceProvider"
+            ],
+            "aliases": {
+                "NotifyHub": "NotifyHub\\LaravelClient\\Facades\\NotifyHub"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
+
