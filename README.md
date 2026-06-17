@@ -15,6 +15,8 @@ Laravel client package for sending events to a [NotifyHub](https://github.com/sn
 
 For Laravel 13, PHP 8.3+ is required by Laravel itself.
 
+The package test matrix is validated on PHP 8.2 with Laravel 10–12, and PHP 8.3 / 8.4 with Laravel 13.
+
 ## Installation
 
 ```bash
