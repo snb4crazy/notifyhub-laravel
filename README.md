@@ -2,7 +2,6 @@
 
 [![Tests](https://github.com/snb4crazy/notifyhub-laravel/actions/workflows/tests.yml/badge.svg)](https://github.com/snb4crazy/notifyhub-laravel/actions/workflows/tests.yml)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/snb4crazy/notifyhub-laravel.svg)](https://packagist.org/packages/snb4crazy/notifyhub-laravel)
-[![License](https://img.shields.io/packagist/l/snb4crazy/notifyhub-laravel.svg)](LICENSE)
 [![License](https://img.shields.io/github/license/snb4crazy/notifyhub-laravel)](LICENSE)
 
 Laravel client package for sending events to a [NotifyHub](https://github.com/snb4crazy/NotifyHub) server.
