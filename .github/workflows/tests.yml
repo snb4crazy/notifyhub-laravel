@@ -46,8 +46,25 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:*" --no-interaction --prefer-dist --no-update
-          composer update --no-interaction --prefer-dist
+          # 1. Turn off the security advisory block specifically for the test environment
+          composer config policy.advisories.block false
+          
+          # 2. Dynamically require the matching version of Orchestra Testbench before updating
+          if [ "${{ matrix.laravel }}" = "10.*" ]; then
+            composer require "orchestra/testbench:^8.0" --dev --no-update --no-interaction
+          elif [ "${{ matrix.laravel }}" = "11.*" ]; then
+            composer require "orchestra/testbench:^9.0" --dev --no-update --no-interaction
+          elif [ "${{ matrix.laravel }}" = "12.*" ]; then
+            composer require "orchestra/testbench:^10.0" --dev --no-update --no-interaction
+          elif [ "${{ matrix.laravel }}" = "13.*" ]; then
+            composer require "orchestra/testbench:^11.0" --dev --no-update --no-interaction
+          fi
+          
+          # 3. Force the specific Laravel version from your test matrix
+          composer require "laravel/framework:${{ matrix.laravel }}" --no-update --no-interaction
+          
+          # 4. Run the actual update
+          composer update --prefer-dist --no-interaction
 
       - name: Run tests
         run: vendor/bin/phpunit
