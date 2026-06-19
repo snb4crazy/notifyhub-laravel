@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/snb4crazy/notifyhub-laravel/actions/workflows/tests.yml/badge.svg)](https://github.com/snb4crazy/notifyhub-laravel/actions/workflows/tests.yml)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/snb4crazy/notifyhub-laravel.svg)](https://packagist.org/packages/snb4crazy/notifyhub-laravel)
-[![License](https://img.shields.io/packagist/l/snb4crazy/notifyhub-laravel.svg)](LICENSE)
+[![License](https://img.shields.io/github/license/snb4crazy/notifyhub-laravel)](LICENSE)
 
 Laravel client package for sending events to a [NotifyHub](https://github.com/snb4crazy/NotifyHub) server.
 
@@ -26,8 +26,10 @@ composer require snb4crazy/notifyhub-laravel
 Publish the config file:
 
 ```bash
-php artisan vendor:publish --tag=notifyhub-config
+php artisan vendor:publish --provider="NotifyHub\\LaravelClient\\NotifyHubServiceProvider" --tag=notifyhub-config
 ```
+
+If Laravel still reports no publishable resources, make sure package discovery is enabled in the consuming app and refresh Composer's autoload/package manifest.
 
 ## Configuration
 
@@ -168,4 +170,3 @@ composer test
 ## License
 
 MIT — see [LICENSE](LICENSE).
-
